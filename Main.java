@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        DiscountedGrocery Pear = new DiscountedGrocery("Pear", 8, 8, 30);
-        Groceries Apple = new Groceries("Apple", 4, 15);
-        Groceries Avocado = new Groceries("Avocado", 15, 4);
+        DiscountedGrocery Pear = new DiscountedGrocery("Pear", 7.99, 8, 33);
+        Groceries Apple = new Groceries("Apple", 3.99, 15);
+        Groceries Avocado = new Groceries("Avocado", 14.99, 4);
 
         Customer Anton = new Customer();
 
@@ -13,7 +13,7 @@ public class Main {
         boolean loop = true;
         while (loop) {
             if (Pear.getSaldo() > 0) {
-                System.out.println("1. *!* Buy " + Pear.getName() + " and get " + Pear.getDiscountInPercent() + "% discount. Your price is " + Pear.discountedPrice() + " SEK per pear, only " + Pear.getSaldo() + " left *!*");
+                System.out.println("1. *!* " + Pear.getDiscountInPercent() + "% discount on " + Pear.getName() + "s. Your price is " + Pear.discountedPrice() + " SEK per pear, only " + Pear.getSaldo() + " left *!*");
             } else {
                 System.out.println("1. --Pears sold out--");
             }

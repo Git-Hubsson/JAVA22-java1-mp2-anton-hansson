@@ -1,9 +1,9 @@
 class Groceries {
     private String name;
-    private int price;
+    private double price;
     private int saldo;
 
-    Groceries(String name, int price, int saldo) {
+    Groceries(String name, double price, int saldo) {
         this.name = name;
         this.price = price;
         this.saldo = saldo;
@@ -13,7 +13,7 @@ class Groceries {
         return name;
     }
 
-    int getPrice() {
+    double getPrice() {
         return price;
     }
 

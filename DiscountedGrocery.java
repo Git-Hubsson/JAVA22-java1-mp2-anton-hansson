@@ -1,7 +1,7 @@
 class DiscountedGrocery extends Groceries {
     private int discountInPercent;
 
-    DiscountedGrocery(String name, int price, int saldo, int discountInPercent) {
+    DiscountedGrocery(String name, double price, int saldo, int discountInPercent) {
         super(name, price, saldo);
         this.discountInPercent = discountInPercent;
     }
@@ -16,6 +16,6 @@ class DiscountedGrocery extends Groceries {
     }
 
     double discountedPrice() {
-        return getPrice() - (getPrice() * ((double) discountInPercent / 100));
+        return Math.round((getPrice() - (getPrice() * ((double) discountInPercent / 100)))*100.0)/100.0;
     }
 }
