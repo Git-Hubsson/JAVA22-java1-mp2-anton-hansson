@@ -1,26 +1,24 @@
-public class Customer {
-    private static int groceriesBought;
-    private static double moneySpent;
+class Customer {
+    private static int groceriesBought = 0;
+    private static double moneySpent = 0;
 
-    Customer(int groceriesBought, int moneySpent) {
-        this.groceriesBought = groceriesBought;
-        this.moneySpent = moneySpent;
+    Customer() {
     }
 
-    int getGroceriesBought(){
+    int getGroceriesBought() {
         return groceriesBought;
     }
 
-    double getMoneySpent(){
+    double getMoneySpent() {
         return moneySpent;
     }
 
     void setGroceriesBought() {
-        this.groceriesBought ++;
+        this.groceriesBought++;
     }
 
     void setMoneySpent(double price) {
-        this.moneySpent +=price;
+        this.moneySpent += price;
     }
 
 

@@ -1,4 +1,4 @@
-public class Groceries {
+class Groceries {
     private String name;
     private int price;
     private int saldo;
@@ -9,23 +9,19 @@ public class Groceries {
         this.saldo = saldo;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getPrice() {
+    int getPrice() {
         return price;
     }
 
-    public int getSaldo() {
+    int getSaldo() {
         return saldo;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setSaldo() {
+    void setSaldo() {
         this.saldo--;
         if (saldo < 0) {
             saldo = 0;

@@ -1,17 +1,21 @@
-public class DiscountedGrocery extends Groceries {
-    private double discountInPercent;
-    DiscountedGrocery(String name, int price, int saldo, double discountInPercent) {
+class DiscountedGrocery extends Groceries {
+    private int discountInPercent;
+
+    DiscountedGrocery(String name, int price, int saldo, int discountInPercent) {
         super(name, price, saldo);
         this.discountInPercent = discountInPercent;
     }
-    public double getDiscountInPercent() {
+
+    int getDiscountInPercent() {
+        if (discountInPercent < 0) {
+            discountInPercent = 0;
+        } else if (discountInPercent > 100) {
+            discountInPercent = 100;
+        }
         return discountInPercent;
     }
-    double newPrice() {
-        return getPrice() * (discountInPercent / 100);
-    }
-    public void soldOut() {
-        discountInPercent = 0;
-        newPrice();
+
+    double discountedPrice() {
+        return getPrice() - (getPrice() * ((double) discountInPercent / 100));
     }
 }
